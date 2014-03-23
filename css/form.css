@@ -1,0 +1,12 @@
+body {
+	background-color: #333;
+}
+
+label .input {
+	display: block;
+}
+
+#book-form {
+	background-color: #FA3;
+	width: 500px;
+}
