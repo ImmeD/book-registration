@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/form.css">
+		<title>Book Registration</title>
+	</head>
+
+	<body>
+		<form id="book-form" method="POST" action="php/book-registration.php">
+			<fieldset>
+				<legend>Register Book</legend>
+				<div>
+					<label>
+						Book name:
+						<input type="text" name="book-name" class="input">
+					</label>
+				</div>
+				<div>
+					<label>
+						Book author:
+						<input type="text" name="book-author" class="input">
+					</label>
+				</div>
+				<div>
+					<button type="submit" name="register">Register</button>
+				</div>
+			</fieldset>
+		</form>
+	</body>
+</html>
