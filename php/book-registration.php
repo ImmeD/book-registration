@@ -2,8 +2,8 @@
 array_pop($_POST);
 
 function getContent ($array) {
-	$name = $array['book-name'];
-	$author = $array['book-author'];
+	$name = $array['book_name'];
+	$author = $array['book_author'];
 	$arr["error"] = array("message" => "Book Was Not Registered");
 	if (!empty($name) && !empty($author)) {
 		header("HTTP/1.1 201 Created");
