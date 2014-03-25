@@ -11,5 +11,24 @@ window.onload = function () {
 			alert("Book author field is required !");
 			return false;
 		}
+
+		var method = form.method;
+		var url = form.action;
+		var xmlhttp;
+
+		xmlhttp = new XMLHttpRequest();
+		xmlhttp.open(method, url, true);
+		xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		xmlhttp.send();
+
+		xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 201) {
+                response = JSON.parse(xmlhttp.responseText);
+                alert("Book name: " + response.book_name + "\nBook author: " + response.book_author);
+            } else if (xmlhttp.readyState == 4 && xmlhttp.status == 400) {
+                response = JSON.parse(xmlhttp.responseText);
+                alert(response.error.message);
+            }
+        }
 	}
 }
