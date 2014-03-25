@@ -30,5 +30,6 @@ window.onload = function () {
                 alert(response.error.message);
             }
         }
+        return false;
 	}
 }
